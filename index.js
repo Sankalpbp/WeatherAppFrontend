@@ -1,8 +1,9 @@
 'use strict';
 
 const hitWeatherApi = async () => {
-    const location = 'Jalandhar';
-    const response = await fetch ('http://api.weatherstack.com/current?access_key=1033c76d0c1530af36960575ab2b03a8&query=Jalandhar');
+    const location = document.getElementById('location-input').value;
+    console.log(location);
+    const response = await fetch (`http://localhost:8080/weatherData?cityName=${location}`);
     const weatherData = await response.json();
 
     document.getElementById('city').innerHTML = 'City: ' + weatherData.location.name;

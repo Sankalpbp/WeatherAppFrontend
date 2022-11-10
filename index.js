@@ -10,7 +10,7 @@ const hitWeatherApi = async () => {
     document.getElementById('region').innerHTML = 'Region: ' + weatherData.location.region;
     document.getElementById('country').innerHTML = 'Country: ' + weatherData.location.country;
     
-    document.getElementById('temperature').innerHTML = 'Temperature right now is: ' + weatherData.current.temperature + ', but feels like: ' + weatherData.current.feelsLike;
+    document.getElementById('temperature').innerHTML = 'Temperature right now is: ' + weatherData.current.temperature + ', but feels like: ' + weatherData.current.feelslike;
     document.getElementById('feels-like').innerHTML = 'Temperature feels like: ' + weatherData.current.feelslike;
     document.getElementById('humidity').innerHTML = 'Humidity right now is: ' + weatherData.current.humidity;
     document.getElementById('visibility').innerHTML = 'Visibility right now is: ' + weatherData.current.visibility;
